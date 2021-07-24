@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"strconv"
 )
 
 type album struct {
@@ -30,6 +31,10 @@ func addAlbum(c *gin.Context) {
 	if err != nil {
 		return
 	}
+
+	newAlbumId := len(albums) + 1
+
+	newAlbum.ID = strconv.Itoa(newAlbumId)
 
 	albums = append(albums, newAlbum)
 
