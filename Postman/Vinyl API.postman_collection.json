@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "7433a00f-85c8-4be1-af76-33e8377ab7a5",
+		"name": "Vinyl API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all albums",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/albums",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"albums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new album",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Always like new\",\r\n    \"artist\": \"Jennifer Nettles\",\r\n    \"price\": 22.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/albums",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"albums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get album by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/albums/4",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"albums",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
